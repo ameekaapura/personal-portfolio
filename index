@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    * {
+    font-family: Courier New, Courier, monospace;
+    font-size: 1.2rem;
+    scroll-behavior: smooth;
+}
+
+/*NAVBAR*/
+#navbar {
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+  z-index: 10;
+  background: #f28500;
+}
+
+#navbar li {
+    height: 100%;
+    margin: 0;
+    padding: 16px;
+    display: inline;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #383f51;
+}
+#navbar li:hover {
+    background: #383f51;
+    color: #f28500;
+    
+}
+#navbar a {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/*BODY*/
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background: F9E5CC; 
+}
+
+/*WELCOME SECTION*/
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.container1 {
+    padding: 5%;
+    height: 100%;
+    width: 100%;
+    color: #383f51;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.intro {
+    font-size: 2rem;
+    align-self: center;
+    text-align: center;
+    margin: 0;
+}
+.intro h1 {
+    font-size: 3rem;
+    color: #383f51;
+}
+.intro p {
+    font-weight: bold;
+    margin: 0;
+}
+#name {
+    font-size: 3rem;
+    color: #f28500;
+}
+/*PROJECTS SECTION*/
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.container2 {
+    display: inline;
+    color: #383f51; 
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: auto auto; 
+}
+.project-tile {
+    font-size: 30px;
+    text-align: center;
+    border: 2px solid #383f51;
+    margin: 10px;
+}
+img {
+    display: block;
+    max-width: 460px;
+    max-height: 237px; 
+    border-bottom: 2px solid #383f51;
+}
+img:hover {
+    transition: .5 ease;
+}
+/*ABOUT ME SECTION*/
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.container3 {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+/*CONTACT SECTION*/
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+}
+.container4 {
+    text-align: center;
+}
+i {
+    text-decoration: none;
+    color: #383f51;
+    margin-right: 10px;
+}
+.contact-links {
+    text-align: center;
+}
+.contact-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #f28500;
+}
+.contact-links a:hover {
+    text-decoration: underline;
+    text-decoration-color: #383f51;
+}
+
+/*DIV*/
+
+/**/
+@media only screen and (max-width: 600px) {
+   section {
+       height: 100vh;
+   } 
+  .projects-grid {
+      display: grid;
+      column-gap: 50px;
+      grid-template-columns: auto; 
+      padding: 10px;
+  }
+  .container2 {
+      height: 100vh;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .projects-grid {
+      display: grid;
+      column-gap: 50px;
+      grid-template-columns: auto; 
+      padding: 10px;
+  }
+}
+/*FOOTER*/
+.container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background: #f28500;
+    color: #383f51;
+}
+.container5 p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+/*MEDIA QUERY*/
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <title>Personal Portfolio</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <a href="#welcome-section"><li>HOME</li></a>
+            <a href="#projects"><li>PROJECTS</li></a>
+            <a href="#about-me"><li>ABOUT ME</li></a>
+            <a href="#contact"><li>CONTACT</li></a>
+        </ul>
+    </nav>
+    <section class="welcome-section" id="welcome-section">
+        <div class="container1">
+        <div class="intro">
+        <h1>Hi! I'm <span id="name">Ameeka Apura</span></h1>
+        <p>a web developer in the making based in the Philippines.</p>
+        <p>I can also be your digital artist/graphic designer.</p>
+        </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="container2">
+            <h2>These are some of my projects</h2>
+        <div class="projects-grid">
+            <div class="project-tile">
+                <img src="https://i.ibb.co/7XnbmwR/survey.png">
+    <a href="https://ameekaapura.github.io/survey-form/"></a>
+                <p>Survey Form</p>
+                </div>
+            <div class="project-tile">
+                <img src="https://i.ibb.co/n6bBzGW/tribute.png">
+    <a href="https://ameekaapura.github.io/tribute-page/"></a>
+                <p>Tribute Page</p>
+                </div>
+            <div class="project-tile">
+                    <img src="https://i.ibb.co/nDmpc6w/prod.png">
+    <a href="https://ameekaapura.github.io/product-landing-page/"></a>
+                <p>Product Landing Page</p>
+            </div>
+            <div class="project-tile">
+                    <img src="https://i.ibb.co/hgBWJfH/tech-doc.png">
+    <a href="https://ameekaapura.github.io/technical-documentation-page/"></a>
+                <p>Technical Documentation Page</p>
+                </div>
+        </div>
+    </section>
+    <section class="about-me" id="about-me">
+        <div class="container3">
+            <h2>Want to get to know me?</h2>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container4">
+            <h2>If you're interested in working with me or if you want to connect or chat, just click below.</h2>
+             <div class="contact-links">
+        <a
+          href="https://www.facebook.com/ameeka.ylyzsa/"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-facebook-square"></i>Facebook</a
+        >
+        <a
+          id="profile-link"
+          href="https://github.com/ameekaapura"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-github"></i>GitHub</a
+        >
+        <a
+          id="profile-link"
+          href="https://www.linkedin.com/in/ameeka-ylyzsa-apura/"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-linkedin"></i>LinkedIn</a
+        >
+        <a href="mailto:ameekaapura@gmail.com" class="btn contact-details"><i class="fas fa-at"></i>Email</a
+        >
+        <a href="09184653630" class="btn contact-details"
+          ><i class="fas fa-mobile-alt"></i>Phone</a
+        >
+      </div>
+        </div>
+    </section>
+    <footer>
+        <section class="footer">
+            <div class="container5">
+            <P>@2024 Ameeka Apura</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
