@@ -87,6 +87,9 @@ body {
     color: #f28500;
 }
 /*PROJECTS SECTION*/
+#color {
+    color: #f28500;
+}
 .projects {
     display: flex;
     flex-direction: column;
@@ -99,9 +102,16 @@ body {
     display: inline;
     color: #383f51; 
 }
+.container2 p {
+    text-align: center;
+}
 .projects-grid {
     display: grid;
     grid-template-columns: auto auto; 
+}
+.projects-grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
 }
 .project-tile {
     font-size: 30px;
@@ -111,12 +121,15 @@ body {
 }
 img {
     display: block;
-    max-width: 460px;
-    max-height: 237px; 
+    max-width: 500px;
+    max-height: auto; 
     border-bottom: 2px solid #383f51;
 }
-img:hover {
-    transition: .5 ease;
+#img2 {
+    display: block;
+    max-width: auto;
+    max-height: 400px; 
+    border-bottom: 2px solid #383f51;
 }
 /*ABOUT ME SECTION*/
 .about-me {
@@ -173,9 +186,21 @@ i {
     text-decoration-color: #383f51;
 }
 
-/*DIV*/
-
-/**/
+/*FOOTER*/
+.container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background: #f28500;
+    color: #383f51;
+}
+.container5 p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+/*MEDIA QUERY*/
 @media only screen and (max-width: 600px) {
    section {
        height: 100vh;
@@ -198,22 +223,6 @@ i {
       padding: 10px;
   }
 }
-/*FOOTER*/
-.container5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    width: 100%;
-    background: #f28500;
-    color: #383f51;
-}
-.container5 p {
-    font-size: 1rem;
-    font-weight: bold;
-}
-/*MEDIA QUERY*/
-
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -225,7 +234,6 @@ i {
         <ul>
             <a href="#welcome-section"><li>HOME</li></a>
             <a href="#projects"><li>PROJECTS</li></a>
-            <a href="#about-me"><li>ABOUT ME</li></a>
             <a href="#contact"><li>CONTACT</li></a>
         </ul>
     </nav>
@@ -240,7 +248,8 @@ i {
     </section>
     <section class="projects" id="projects">
         <div class="container2">
-            <h2>These are some of my projects</h2>
+            <h2>These are some of my <span id="color">projects<span></h2>
+            <p>Web Design</p>
         <div class="projects-grid">
             <div class="project-tile">
                 <img src="https://i.ibb.co/7XnbmwR/survey.png">
@@ -264,9 +273,26 @@ i {
                 </div>
         </div>
     </section>
-    <section class="about-me" id="about-me">
-        <div class="container3">
-            <h2>Want to get to know me?</h2>
+    <section class="projects" id="projects">
+        <div class="container2">
+            <p>Illustrations</p>
+        <div class="projects-grid2">
+            <div class="project-tile">
+                <img id="img2"  src="https://i.ibb.co/qR3Ff3R/zhongli5.jpg" style="height: 500px">
+                <p>Zhongli Fan Art</p>
+                </div>
+            <div class="project-tile">
+                <img id="img2"  src="https://i.ibb.co/LtjWccT/azure-empyreaa.jpg" style="height: 500px">
+                <p>Azure Empyrea Fan Art</p>
+                </div>
+            <div class="project-tile">
+                    <img id="img2"  src="https://i.ibb.co/Z6jFbdH/kiana-final.jpg" style="height: 500px">
+                <p>Kiana Fan Art</p>
+            </div>
+            <div class="project-tile">
+                    <img id="img2" src="https://i.ibb.co/mXWHxZP/babyy.jpg" style="height: 500px">
+                <p>Original Character</p>
+                </div>
         </div>
     </section>
     <section class="contact" id="contact">
