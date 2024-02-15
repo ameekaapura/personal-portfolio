@@ -40,9 +40,8 @@
         a {
             font-weight: bold;
             text-decoration: none;
-
+            color:#383f51;
         }
-
         li:hover {
             background: #383f51;
             color: #f28500;
@@ -60,7 +59,7 @@
         body {
             overflow-x: hidden;
             margin: 0;
-            background: F9E5CC;
+            background: white;
         }
 
         /*WELCOME SECTION*/
@@ -192,6 +191,7 @@
         .projects-grid2 {
             display: grid;
             grid-template-columns: auto auto auto auto;
+            margin-bottom: 20px;
         }
 
         .projects-grid3 {
@@ -225,8 +225,12 @@
             display: block;
             max-height: 500px;
         }
-        #prof {
-
+        .button {
+            border-radius: 5px 5px 5px 5px;
+        }
+        .button:hover {
+            background-color: #f28500;
+            color: #383f51;
         }
 
         /*CONTACT SECTION*/
@@ -392,7 +396,7 @@
                     <img id="img3" src="https://i.ibb.co/MnmnD0M/Calculator.png">
                     <p>Standard Calculator</p>
                     <p>C# .Net Framework (Windows Form)</p>
-                    <a href="https://github.com/ameekaapura/standard-calculator-app-csharp" target="_blank">Visit Project</a>
+                    <button class="button"><a href="https://github.com/ameekaapura/standard-calculator-app-csharp" target="_blank">Visit Project</a></button>
                 </div>
             </div>
     </section>
@@ -417,7 +421,7 @@
                     <p>Original Character</p>
                 </div>
             </div>
-            <a href="https://ameekaylyzsaapura6.artstation.com/" target="_blank">Visit ArtStation</a>
+            <button class="button"><a id="link" href="https://ameekaylyzsaapura6.artstation.com/" target="_blank">Visit ArtStation</a></button>
     </section>
     <section class="skills" id="skills">
         <div class="container2">
