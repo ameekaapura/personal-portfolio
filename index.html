@@ -31,7 +31,7 @@
 
         li {
             display: inline;
-            margin-right: 20px;
+            margin-right: 50px;
             list-style-type: none;
             text-decoration: none;
             color: #383f51;
@@ -75,20 +75,22 @@
 
         .container1 {
             padding: 5%;
+            margin: 10%;
             height: 100%;
-            width: 100%;
             color: #383f51;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
+            align-items: center;
         }
-
+        .profile {   
+            border: 2px solid #383f51;
+            margin-left: 50px;
+        }
         .intro {
             font-size: 2rem;
-            align-self: center;
-            text-align: center;
-            margin-left: 10%;
-            margin-right: 10%;
+            text-align: justify;
+            max-width: 800px;
         }
 
         .intro h1 {
@@ -117,30 +119,44 @@
         }
 
         #logo {
-            max-height: 200px;
-            max-width: 200px;
+            max-height: 100px;
+            max-width: 100px;
         }
-
+        .skills-div {
+            margin: 10px;
+            border: 2px solid #383f51;
+        }
         .skills-grid {
             margin-top: 50px;
             display: grid;
             grid-template-columns: auto auto auto auto;
         }
+        .skills-row {
+            display: flex;
+            flex-direction: row;
+        }
 
         .project-tile1 {
+            display: flex;
+            flex-direction: column;
             font-size: 30px;
             text-align: center;
-            justify-content: center;
             align-items: center;
             margin: 20px;
         }
 
         .project-tile2 {
+            display: flex;
+            flex-direction: column;
             font-size: 30px;
             text-align: center;
             justify-content: center;
             align-items: center;
             margin: 10px;
+        }
+        .project-tile2 a {
+            color: #383f51;
+            font-style: normal;
         }
 
         /*PROJECTS SECTION*/
@@ -160,6 +176,7 @@
         .container2 {
             display: block;
             justify-content: center;
+            text-align: center;
             color: #383f51;
         }
 
@@ -195,7 +212,6 @@
             display: block;
             max-width: 500px;
             max-height: auto;
-            border-bottom: 2px solid #383f51;
         }
 
         #img2 {
@@ -208,8 +224,9 @@
         #img3 {
             display: block;
             max-height: 500px;
-            justify-content: center;
-            align-self: flex-start
+        }
+        #prof {
+
         }
 
         /*CONTACT SECTION*/
@@ -315,17 +332,12 @@
             <a href="#welcome-section">
                 <li>HOME</li>
             </a>
-            <a href="#skills">
-                <li>SKILLS</li>
-            </a>
             <a href="#projects">
                 <li>PROJECTS</li>
             </a>
-            <ul class="dropdown">
-                <li class="dropdown">App Development</li>
-                <li class="dropdown">Web Design</li>
-                <li class="dropdown">Illustrations</li>
-            </ul>
+            <a href="#skills">
+                <li>SKILLS</li>
+            </a>
             <a href="#contact">
                 <li>CONTACT</li>
             </a>
@@ -335,18 +347,83 @@
         <div class="container1">
             <div class="intro">
                 <h1>Hi! I'm <span id="name">Ameeka Apura</span></h1>
-                <p>an aspiring programmer/developer located in Marikina, PH.</p>
-                <p>Although I hold a bachelor's degree in Food Technology from PUP Manila,</p>
-                <p>my true passion lies in becoming a game developer.</p>
-                <p>I am actively working towards this goal by engaging in online programming courses.</p>
-                <p>The process of learning programming not only excites me but also brings me immense joy.</p>
-                <p>:D</p>
+                <p>An aspiring programmer/developer located in Marikina, PH. Although I hold a bachelor's degree in Food Technology from PUP Manila, my true passion lies in becoming a game developer. I am actively working towards this goal by engaging in online programming courses and making personal projects. The process of learning programming not only excites me but also brings me immense joy :D</p>
+            </div>
+            <div class="profile">
+                <img id="prof" src="https://i.ibb.co/fMc9Q7k/profile.png">
             </div>
         </div>
+    </section>
+   <section class="projects" id="projects">
+        <div class="container2">
+            <h2>These are some of my <span id="color">projects<span></h2>
+            <p>Web Design (HTML, CSS)</p>
+            <div class="projects-grid">
+                <div class="project-tile">
+                    <a href="https://ameekaapura.github.io/tribute-page/" target=”_blank”>
+                        <img id="img2" src="https://i.ibb.co/n6bBzGW/tribute.png">
+                    </a>
+                    <p>Tribute Page</p>
+                </div>
+                <div class="project-tile">
+                    <a href="https://ameekaapura.github.io/technical-documentation-page/" target=”_blank”>
+                        <img id="img2" src="https://i.ibb.co/0MXJssW/tech-doc.png">
+                    </a>
+                    <p>Technical Documentation Page</p>
+                </div>
+                <div class="project-tile">
+                    <a href="https://ameekaapura.github.io/survey-form/" target=”_blank”>
+                        <img id="img2" src="https://i.ibb.co/7XnbmwR/survey.png">
+                    </a>
+                    <p>Survey Form</p>
+                </div>
+                <div class="project-tile">
+                    <a href="https://ameekaapura.github.io/product-landing-page/" target=”_blank”>
+                        <img id="img2" src="https://i.ibb.co/nDmpc6w/prod.png"></a>
+                    <p>Product Landing Page</p>
+                </div>
+            </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="container2">
+            <p>App Development</p>
+            <div class="projects-grid3">
+                <div class="project-tile2">
+                    <img id="img3" src="https://i.ibb.co/MnmnD0M/Calculator.png">
+                    <p>Standard Calculator</p>
+                    <p>C# .Net Framework (Windows Form)</p>
+                    <a href="https://github.com/ameekaapura/standard-calculator-app-csharp" target="_blank">Visit Project</a>
+                </div>
+            </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="container2">
+            <p>I also do <span id="color">Illustrations</span></p>
+            <div class="projects-grid2">
+                <div class="project-tile">
+                    <img id="img2" src="https://i.ibb.co/qR3Ff3R/zhongli5.jpg" style="height: 500px">
+                    <p>Zhongli Fan Art</p>
+                </div>
+                <div class="project-tile">
+                    <img id="img2" src="https://i.ibb.co/LtjWccT/azure-empyreaa.jpg" style="height: 500px">
+                    <p>Azure Empyrea Fan Art</p>
+                </div>
+                <div class="project-tile">
+                    <img id="img2" src="https://i.ibb.co/Z6jFbdH/kiana-final.jpg" style="height: 500px">
+                    <p>Kiana Fan Art</p>
+                </div>
+                <div class="project-tile">
+                    <img id="img2" src="https://i.ibb.co/mXWHxZP/babyy.jpg" style="height: 500px">
+                    <p>Original Character</p>
+                </div>
+            </div>
     </section>
     <section class="skills" id="skills">
         <div class="container2">
             <h2><span id="color">Skills</span> that I have learned</h2>
+            <div class="skills-row">
+            <div class="skills-div">
+                <p>Programming Skills</p>
             <div class="skills-grid">
                 <div class="project-tile1">
                     <img id="logo"
@@ -383,69 +460,41 @@
                     <p>SQL</p>
                 </div>
             </div>
-    </section>
-   <section class="projects" id="projects">
-        <div class="container2">
-            <h2>These are some of my <span id="color">projects<span></h2>
-            <p>Web Design (HTML, CSS)</p>
-            <div class="projects-grid">
-                <div class="project-tile">
-                    <a href="https://ameekaapura.github.io/tribute-page/">
-                        <img src="https://i.ibb.co/n6bBzGW/tribute.png">
-                    </a>
-                    <p>Tribute Page</p>
+            </div>
+            <div class="skills-div">
+                <p>Other Skills</p>
+            <div class="skills-grid">
+                <div class="project-tile1">
+                    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png">
+                    <p>Photoshop</p>
                 </div>
-                <div class="project-tile">
-                    <a href="https://ameekaapura.github.io/technical-documentation-page/">
-                        <img src="https://i.ibb.co/0MXJssW/tech-doc.png">
-                    </a>
-                    <p>Technical Documentation Page</p>
+                <div class="project-tile1">
+                    <img id="logo" src="https://freelogopng.com/images/all_img/1656733637logo-canva-png.png">
+                    <p>Canva</p>
                 </div>
-                <div class="project-tile">
-                    <a href="https://ameekaapura.github.io/survey-form/">
-                        <img src="https://i.ibb.co/7XnbmwR/survey.png">
-                    </a>
-                    <p>Survey Form</p>
+                <div class="project-tile1">
+                    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Logo_Aseprite.svg/1200px-Logo_Aseprite.svg.png">
+                    <p>Aseprite</p>
                 </div>
-                <div class="project-tile">
-                    <a href="https://ameekaapura.github.io/product-landing-page/">
-                        <img src="https://i.ibb.co/nDmpc6w/prod.png"></a>
-                    <p>Product Landing Page</p>
+                <div class="project-tile1">
+                    <img id="logo" src="https://medibangpaint.biblprog.com/wp-content/uploads/sites/23/2022/10/medibangpaint.png">
+                    <p>Medibang</p>
+                </div>
+                <div class="project-tile1">
+                    <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAy7jdRkKv0DgQyK4iQ_wnAwEuNXAbf5cuwg&usqp=CAU">
+                    <p>Blender</p>
+                </div>
+                <div class="project-tile1">
+                    <img src="https://w7.pngwing.com/pngs/190/428/png-transparent-fl-studio-mobile-digital-audio-workstation-line-android-food-studio-orange-thumbnail.png"id="logo">
+                    <p>Fl Studio</p>
+                </div>
+                <div class="project-tile1">
+                    <img id="logo" src="https://assets.stickpng.com/images/62e131df7fe3599fdd46ecb3.png">
+                    <p>Unity</p>
                 </div>
             </div>
-    </section>
-    <section class="projects" id="projects">
-        <div class="container2">
-            <p>App Development</p>
-            <div class="projects-grid3">
-                <div class="project-tile2">
-                    <img id="img3" src="https://i.ibb.co/MnmnD0M/Calculator.png">
-                    <p>Standard Calculator</p>
-                    <p>C# .Net Framework</p>
-                </div>
             </div>
-    </section>
-    <section class="projects" id="projects">
-        <div class="container2">
-            <p>I also do <span id="color">Illustrations</span></p>
-            <div class="projects-grid2">
-                <div class="project-tile">
-                    <img id="img2" src="https://i.ibb.co/qR3Ff3R/zhongli5.jpg" style="height: 500px">
-                    <p>Zhongli Fan Art</p>
-                </div>
-                <div class="project-tile">
-                    <img id="img2" src="https://i.ibb.co/LtjWccT/azure-empyreaa.jpg" style="height: 500px">
-                    <p>Azure Empyrea Fan Art</p>
-                </div>
-                <div class="project-tile">
-                    <img id="img2" src="https://i.ibb.co/Z6jFbdH/kiana-final.jpg" style="height: 500px">
-                    <p>Kiana Fan Art</p>
-                </div>
-                <div class="project-tile">
-                    <img id="img2" src="https://i.ibb.co/mXWHxZP/babyy.jpg" style="height: 500px">
-                    <p>Original Character</p>
-                </div>
-            </div>
+        </div>
     </section>
     <section class="contact" id="contact">
         <div class="container4">
