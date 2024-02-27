@@ -108,7 +108,8 @@ nav {
   left: 0;
   height: 86px;
   width: 100vw;
-  display: inline-flex;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
   transition: all 0.3s;
 }
@@ -180,7 +181,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   margin-left: 3%;
-  margin-right: 38%;
+  margin-right: 30%;
 }
 /* HOME */
 #home {
