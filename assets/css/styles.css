@@ -181,7 +181,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   margin-left: 3%;
-  margin-right: 40%;
+  margin-right: 35%;
 }
 /* HOME */
 #home {
@@ -293,10 +293,7 @@ h3 {
 }
 /* PROJECTS */
 #video-2 {
-  display: block;
   position: absolute;
-  right: 0;
-  bottom: 0;
   width: 100vw;
   height: 90vh;
   object-fit: cover;
@@ -462,4 +459,100 @@ footer {
 }
 footer p {
   font-size: 1.2rem;
+}
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+  .nav-up {
+    top: -200px;
+  }
+  .navbar {
+    background-color: rgba(0,0,0,0.5);
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    z-index: 2;
+  }
+  #menu-dropdown:hover #dropdown {
+    display: block;
+    top: 150px;
+    padding: 10px;
+  }
+  .logo {
+    margin-right: 3%;
+  }
+  #about-me {
+    height: 60vh;
+  }
+  #skills {
+    height: 150vh;
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+  }
+  .skills-grid-pic img {
+    height: 80px;
+  }
+  .skills-grid {
+    margin: 2rem;
+  }
+  .container_2_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #projects {
+    height: 180vh;
+  }
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #video-2 {
+    height:180vh;
+  }
+  #projects-2 {
+    height: 100vh;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    margin: 0px;
+  }
+  #gp2-img {
+    margin: 0%;
+  }
+  .grid-pic-2-1 {
+    margin: 0%;
+  }
+  #projects-3, #video-3 {
+    height: 300vh;
+  }
+  .grid-pic-3 {
+    flex-direction: column;
+  }
 }
