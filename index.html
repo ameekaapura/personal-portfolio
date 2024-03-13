@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo Black">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Ameeka Apura</title>
 </head>
 
@@ -21,33 +22,32 @@
   <video autoplay muted loop id="video-1">
     <source src="assets/images/main-bg.mp4">
   </video>
-  <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="bi bi-arrow-up-square-fill"><svg
+  <button onclick="topBtn()" id="topBtn" title="Go to top"><i class="bi bi-arrow-up-square-fill"><svg
         xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-square-fill"
         viewBox="0 0 16 16">
         <path
           d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0" />
       </svg></i></button>
-  <nav class="navbar" id="nav">
+
+  <nav>
     <div class="logo">
       <img class="logo-pic" src="assets/images/logo.png" height="40px">
     </div>
-    <div class="menu">
-      <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about-me">ABOUT ME</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li id="menu-dropdown">PROJECTS
-          <ul id="dropdown">
-            <li><a href="#web-designs">WEB DESIGNS</a></li>
-            <li><a href="#app-development">APP DEVELOPMENT</a></li>
-            <li><a href="#illustrations">ILLUSTRATIONS</a></li>
-          </ul>
-        </li>
-        <li><a href="assets/resume/AMEEKA APURA (RESUME).pdf" download="AMEEKA APURA (RESUME).pdf"><button
-              id="resume-btn">RESUME</button></a></li>
-      </ul>
+    <div class="menu" id="menu-bar">
+      <a href="#home" class="active">HOME</a>
+      <a href="#about-me">ABOUT ME</a>
+      <a href="#skills">SKILLS</a>
+      <div class="dropdown">
+        <button class="dropbtn">PROJECTS <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="#web-designs">WEB DESIGNS</a>
+          <a href="#app-development">APP DEVELOPMENT</a>
+          <a href="#illustrations">ILLUSTRATIONS</a>
+        </div>
+      </div>
     </div>
   </nav>
+
   <div id="home">
     <div class="container_1">
       <h1>Ameeka Apura</h1>
@@ -77,12 +77,15 @@
                 d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
             </svg></i></a>
       </div>
+
+      <a href="assets/resume/AMEEKA APURA (RESUME).pdf" download="AMEEKA APURA (RESUME).pdf"><button
+          id="resume-btn">RESUME</button></a>
     </div>
   </div>
   <div id="about-me">
     <div class="container_2">
       <p>I'm an aspiring programmer/developer located in Marikina, PH. Although I hold a bachelor's degree in Food
-        Technology from PUP Manila, my true passion lies in becoming a web developer/game developer/software engineer. 
+        Technology from PUP Manila, my true passion lies in becoming a web developer/game developer/software engineer.
         I am actively working towards this goal by engaging in online programming courses and making personal projects.
         The process of learning programming not only excites me but also brings me immense joy.</p>
     </div>
@@ -197,12 +200,17 @@
       <div class="grid-2">
         <div class="grid-pic-2">
           <img id="gp2-img" src="assets/images/app development/Calculator.png">
-        </div>
-        <div class="grid-pic-2-1">
           <p id="p-2"><span id="text-filter">Standard Calculator</span> developed using C# .Net Framework (Windows Form)
           </p>
           <a id="grid-link" href="https://github.com/ameekaapura/standard-calculator-app-csharp" target="_blank"><button
               id="appdev-btn">Visit Project</button></a>
+        </div>
+        <div class="grid-pic-2">
+          <img id="gp2-img" src="assets/images/app development/tic-tac-toe.png">
+          <p id="p-2"><span id="text-filter">Tic Tac Toe</span> game built using ReactJS
+          </p>
+          <a id="grid-link" href="https://ameekaapura.github.io/tic-tac-toe/" target="_blank"><button
+              id="appdev-btn">Play Game</button></a>
         </div>
       </div>
     </div>
@@ -238,7 +246,7 @@
     </div>
   </div>
   <footer>
-      <p>@2024 Ameeka Apura</p>
+    <p>@2024 Ameeka Apura</p>
   </footer>
   <script src="assets/js/script.js"></script>
 </body>
