@@ -678,8 +678,8 @@
       align-items: center;
     }
 
-    #projects {
-      height: 150vh;
+    #projects, #video-2 {
+      height: 1300px;
     }
 
     .projects-grid {
@@ -689,9 +689,7 @@
       align-items: center;
     }
 
-    #video-2 {
-      height: 150vh;
-    }
+    
 
     #projects-2 {
       height: 250vh;
@@ -744,7 +742,7 @@
 
     #projects-3,
     #video-3 {
-      height: 250vh;
+      height: 2000px;
     }
 
     .grid-pic-3 {
