@@ -187,10 +187,11 @@
     text-align: left;
   }
 
-  .menu a:hover{
+  .menu a:hover {
     filter:
       drop-shadow(5px 0px 2px rgba(255, 0, 255, 0.5)) drop-shadow(-4px 0px 5px rgba(0, 255, 191, 0.5)) drop-shadow(5px 0px 10px rgba(49, 122, 255, 1));
   }
+
   .dropdown:hover .dropbtn {
     filter:
       drop-shadow(5px 0px 2px rgba(255, 0, 255, 0.5)) drop-shadow(-4px 0px 5px rgba(0, 255, 191, 0.5)) drop-shadow(5px 0px 10px rgba(49, 122, 255, 1));
@@ -227,6 +228,10 @@
   #resume-btn:hover {
     filter:
       drop-shadow(5px 0px 2px rgba(255, 0, 255, 0.5)) drop-shadow(-4px 0px 5px rgba(0, 255, 191, 0.5)) drop-shadow(5px 0px 10px rgba(49, 122, 255, 1));
+  }
+
+  #resume-btn a {
+    text-decoration: none;
   }
 
   .logo {
@@ -359,7 +364,7 @@
   #video-2 {
     position: absolute;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
   }
@@ -370,13 +375,37 @@
     justify-content: center;
     align-items: center;
   }
+.proj-desc {
+  margin-bottom: 1rem;
+}
+  .proj-desc-title {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .tag {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .tag span {
+    border: 1px solid white;
+    background-color: rgb(0, 0, 0,0);
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 5px 5px;
+    font-size: 12px;
+  }
 
   #projects {
     position: relative;
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     z-index: 1;
   }
 
@@ -392,7 +421,6 @@
 
   #p-2 {
     font-size: 1.2rem;
-    margin-bottom: 50px;
   }
 
   .projects-grid {
@@ -431,16 +459,20 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .grid-pic-2 img {
+  .grid-pic-2 img, .grid-pic-2-1 img {
     max-height: 400px;
     width: auto;
   }
 
   .grid-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+    margin: 1.5rem 0;
+  }
+
+  .grid-pic-2-1 {
+    grid-column: 1 / span 2;
   }
 
   #appdev-btn {
@@ -450,6 +482,7 @@
     font-size: 1.2rem;
     font-family: "Archivo Black", sans-serif;
     cursor: pointer;
+    margin-top: 1rem;
   }
 
   .grid-pic-2 {
@@ -466,9 +499,9 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 90vh;
+    height: 150vh;
     background-image: url("../images/bg-5.jpg");
-    object-fit: contain;
+    object-fit:cover;
   }
 
   #text-filter {
@@ -561,18 +594,19 @@
 
     body,
     p,
-    #resume-btn {
+    #resume-btn, #tag span {
       font-size: 1.1rem;
     }
-    
-    .menu a, .dropdown .dropbtn {
+
+    .menu a,
+    .dropdown .dropbtn {
       font-size: 1rem;
       text-align: left;
       display: flex;
       align-items: center;
       justify-content: left;
     }
-    
+
     .dropdown-content a {
       font-size: 14px;
       text-align: left;
@@ -585,6 +619,7 @@
     h2 {
       font-size: 1.3rem;
     }
+
     nav {
       display: flex;
       flex-direction: column;
@@ -592,15 +627,17 @@
       align-items: center;
       height: 200px;
     }
+
     .logo-pic {
       height: 30px;
     }
+
     .logo {
       display: block;
-      position:relative;
+      position: relative;
       margin: 0;
     }
-    
+
     .nav-up {
       top: -400px;
     }
@@ -658,7 +695,7 @@
     }
 
     #projects-2 {
-      height: 150vh;
+      height: 250vh;
       object-fit: cover;
       background-size: cover;
       background-position: center;
@@ -666,6 +703,7 @@
       justify-content: center;
       align-items: center;
     }
+
     #projects-2 p {
       width: 325px;
     }
@@ -674,9 +712,6 @@
       width: 325px;
     }
 
-    .grid {
-      height: 225px;
-    }
 
     .grid-2 {
       display: flex;
@@ -696,12 +731,16 @@
 
     #gp2-img {
       margin: 0%;
-      height: 325px;
+      width: 325px;
     }
 
-    .grid-pic-2-1 {
-      margin: 0%;
-      width: 400px;
+    .grid-pic-2-1 img {
+      max-width: 325px;
+      height: auto;
+    }
+    .grid-pic-2 img {
+      max-height: 400px;
+      width: auto;
     }
 
     #projects-3,
@@ -712,7 +751,8 @@
     .grid-pic-3 {
       flex-direction: column;
     }
+
     #gp3-img:hover {
-    transform: scale(1);
+      transform: scale(1);
     }
   }
