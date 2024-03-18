@@ -678,8 +678,8 @@
       align-items: center;
     }
 
-    #projects, #video-2 {
-      height: 1300px;
+    #projects, .container_3, #video-2 {
+      height: 1400px;
     }
 
     .projects-grid {
